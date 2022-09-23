@@ -21,7 +21,6 @@ def resultpage(request):
     if request.method == 'POST':
         Data=list(request.POST.dict().values())
         if valid(Data) :
-            print(valid(Data))
             result=predict(Data)
             return render(request,'resultpage.html',{'name':result})
         else:     return render(request,'EnterFeaures.html',{'message':'please enter valid values'})
@@ -40,7 +39,6 @@ def valid(Data):
     sesseion_lenght=Data[0]
     end_trackdone=Data[1]
     if sesseion_lenght=='' or end_trackdone== '':
-        print('empty')
         return False
     sesseion_lenght=int(Data[0])
     end_trackdone=int(Data[1])
