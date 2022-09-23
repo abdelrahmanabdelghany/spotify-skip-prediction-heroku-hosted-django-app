@@ -5,6 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
+flask = "*"
+gunicorn = "*"
+heroku = "*"
+django-heroku = "*"
+numpy = "*"
+sklearn = "*"
 
 [dev-packages]
 
