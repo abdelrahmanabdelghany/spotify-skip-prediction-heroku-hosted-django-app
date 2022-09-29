@@ -39,7 +39,7 @@
     }
     </style>
 </head>
-<body  link="#000" style="background-image:url('{% static 'images/pn.jpg'%}'); background-repeat:no-repeat; background-size: cover;"alink="#017bf5" vlink="#000"></body>
+<body  link="#000" style="background-image:url('{% static 'images/green-gradient.png'%}'); background-repeat:no-repeat; background-size: cover;"alink="#017bf5" vlink="#000"></body>
 
 <br />
 
@@ -53,18 +53,113 @@
         
     <div>
         <font face="Trebuchet MS" size="5">
-        <label class="tooltip"; alt="please enter an integer" for="session_lenght" ; style="color:white;">session_lenght:   <span class="tooltiptext">please enter an integer</span>
+        
+        <div><label class="tooltip";  for="Track ID" ; style="color:white;">Track ID:   <span class="tooltiptext">please enter a valid ID</span>
         </label>
-        <input type="number" id="session_lenght" name="session_lenght"><br><br>
-        </div>
+        <input type="text" id="Track ID" name="Track ID"><br><br></div>
+
+        <div><label  class="tooltip";for="Session Length" ; style="color:white;"   >session_length:   <span class="tooltiptext">please enter an integer</span>
+        </label>
+        <input type="number" id="Session Length" name="Session Length"><br><br></div>
+
+        <div><label  class="tooltip";for="Session Position" ; style="color:white;"   >session_position:   <span class="tooltiptext">please enter an integer</span>
+        </label>
+        <input type="number" id="Session Position" name="Session Position"><br><br></div>
+        
+        <div><label  class="tooltip";for="Context Switch" ; style="color:white;"   >context_switch:   <span class="tooltiptext">please choose True or False</span>
+        </label>
+        <select name="context_switch" id="context_switch">
+          <option value=1>True</option>
+          <option value=0>False</option>
+        </select>
+        <br><br></div>
+
+        <div><label  class="tooltip";for="no_pause_before_play" ; style="color:white;"   >no_pause_before_play:   <span class="tooltiptext">please choose True or False</span>
+        </label>
+        <select name="no_pause_before_play" id="no_pause_before_play">
+          <option value=1>True</option>
+          <option value=0>False</option>
+        </select>
+        <br><br></div>
+        
+        <div><label  class="tooltip";for="hist_user_behavior_n_seekfwd" ; style="color:white;"   >hist_user_behavior_n_seekfwd:   <span class="tooltiptext">please choose True or False</span>
+        </label>
+        <select name="hist_user_behavior_n_seekfwd" id="hist_user_behavior_n_seekfwd">
+          <option value=1>True</option>
+          <option value=0>False</option>
+        </select>
+        <br><br></div>
+        
+        <div><label  class="tooltip";for="hist_user_behavior_n_seekback" ; style="color:white;"   >hist_user_behavior_n_seekback:   <span class="tooltiptext">please choose True or False</span>
+        </label>
+        <select name="hist_user_behavior_n_seekback" id="hist_user_behavior_n_seekback">
+          <option value=1>True</option>
+          <option value=0>False</option>
+        </select>
+        <br><br></div>
+        
+        <div><label  class="tooltip";for="hour_of_day" ; style="color:white;"   >hour_of_day:   <span class="tooltiptext">please enter an integer</span>
+        </label>
+        <input type="number" id="hour_of_day" name="hour_of_day"><br><br></div>
+        
+        <div><label  class="tooltip";for="premium" ; style="color:white;"   >premium:   <span class="tooltiptext">please choose True or False</span>
+        </label>
+        <select name="premium" id="premium">
+          <option value=1>True</option>
+          <option value=0>False</option>
+        </select>
+        <br><br></div>
+
         <div>
-            <font face="Trebuchet MS" size="5">
-                <label  class="tooltip"; alt="please enter an integer" for="end_trackdone" ; style="color:white;"   >end_trackdone:   <span class="tooltiptext">please enter 0 or 1</span>
-                </label>
-                 
-                <input type="number" id="end_trackdone" name="end_trackdone"><br><br>
-            </div>
-        <div> 
+        <label  class="tooltip";for="context_type" ; style="color:white;"   >context_type:   <span class="tooltiptext">please choose context_type</span>
+        </label>
+        <select name="context_type" id="context_type">
+          <option value=0>editorial_playlist</option>
+          <option value=1>user_collection</option>
+          <option value=2>radio</option>
+          <option value=3>personalized_playlist</option>
+          <option value=4>catalog</option>
+          <option value=5>charts</option>
+        </select>    
+        <br><br></div>     
+        
+
+        <div>
+          <label  class="tooltip";for="hist_user_behavior_reason_start" ; style="color:white;"   >hist_user_behavior_reason_start:   <span class="tooltiptext">please choose hist_user_behavior_reason_start</span>
+          </label>
+          <select name="hist_user_behavior_reason_start" id="hist_user_behavior_reason_start">
+            <option value=0>trackdone</option>
+            <option value=1>fwdbtn</option>
+            <option value=2>backbtn</option>
+            <option value=3>clickrow</option>
+            <option value=4>appload</option>
+            <option value=5>playbtn</option>
+            <option value=6>remote</option>
+            <option value=7>trackerror</option>
+            <option value=8>endplay</option>
+          </select>    
+          <br><br></div>   
+        <div>
+          <label  class="tooltip";for="hist_user_behavior_reason_end" ; style="color:white;"   >hist_user_behavior_reason_end:   <span class="tooltiptext">please choose hist_user_behavior_reason_end</span>
+          </label>
+          <select name="hist_user_behavior_reason_end" id="hist_user_behavior_reason_end">
+            <option value=0>trackdone</option>
+            <option value=1>fwdbtn</option>
+            <option value=2>backbtn</option>
+            <option value=3>endplay</option>
+            <option value=4>logout</option>
+            <option value=5>remote</option>
+            <option value=6>clickrow</option>
+          </select>    
+          <br><br></div>  
+
+        <div><label  class="tooltip";for="premium" ; style="color:white;"   >Date:   <span class="tooltiptext">please enter the Date</span>
+          </label>
+          <input type="date" id="Date" name="trip-Date"
+          value="2018-07-22"><br><br></div>
+  
+
+
         <input type="submit" style="color:#000;padding: 10px;border-radius: 8px;font-size: 27px" value="Make Prediction">
             </div>
         
