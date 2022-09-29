@@ -1,19 +1,17 @@
- [[source]]
+[[source]]
 url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
 [packages]
 django = "*"
-flask = "*"
 gunicorn = "*"
-heroku = "*"
-django-heroku = "*"
-numpy = "*"
-sklearn = "*"
 pandas = "*"
+numpy = "*"
+django-heroku = "*"
+sklearn = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"
