@@ -11,6 +11,7 @@ heroku = "*"
 django-heroku = "*"
 numpy = "*"
 sklearn = "*"
+pandas = "*"
 
 [dev-packages]
 
